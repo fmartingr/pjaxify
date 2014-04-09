@@ -1,0 +1,15 @@
+{
+  "name": "pjaxify",
+  "version": "0.1.0",
+  "authors": [
+    "Felipe Martin <fmartingr@me.com>"
+  ],
+  "license": "GPLv2",
+  "devDependencies": {
+    "grunt": ">=0.4.1",
+    "grunt-contrib-coffee": ">=0.7.0",
+    "grunt-contrib-uglify": ">=0.2.2",
+    "grunt-contrib-watch": ">=0.4.0",
+    "grunt-bower": "^0.9.1"
+  }
+}
