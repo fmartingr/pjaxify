@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery-pjax.js"></script>
+    <script type="text/javascript" src="pjaxify.js"></script>
+    <style type="text/css">
+    #main_content {
+        border: black 1px solid;
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Time: <script type="text/javascript">document.write(new Date());</script></li>
+            <li><a href="index.html">Back to home (no pjax)</a></li>
+            <li><a href="blog.html" data-pjax>Blog</a> (normal)</li>
+            <li><a href="blog.html" data-pjax data-pjax-nopush>Blog</a> (no-push)</li>
+        </ul>
+    </nav>
+
+    <hr />
+
+    <div id="main_content" data-pjax-container="main">
+        This is the main content.
+    </div>
+</body>
+</html>

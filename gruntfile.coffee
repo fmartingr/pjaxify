@@ -26,15 +26,28 @@ module.exports = (grunt) ->
         files: ['src/*.coffee']
         tasks: ['coffee',]
 
+    connect:
+      server:
+        options:
+          port: 9000
+          middleware: (connect, options) ->
+            path = require 'path'
+            return [
+              connect.static(path.resolve('test')),
+              connect.static(path.resolve('dist')),
+              connect.static(path.resolve('static_components'))
+            ]
 
     # Modules
     grunt.loadNpmTasks 'grunt-contrib-coffee'
     grunt.loadNpmTasks 'grunt-contrib-uglify'
     grunt.loadNpmTasks 'grunt-contrib-watch'
+    grunt.loadNpmTasks 'grunt-contrib-connect'
     grunt.loadNpmTasks 'grunt-bower'
 
     # Tasks
     grunt.registerTask 'default', [
+      "connect:server",
       "bower:development",
       "coffee:development",
       "watch:coffee"
