@@ -1,13 +1,13 @@
 {
   "name": "pjaxify",
   "authors": [
-    "Felipe Martin <fmartingr@me.com>"
+    "Felipe Martin <fmartingr@gmail.com>"
   ],
   "license": "GPLv2",
   "version": "0.1.0",
   "main": "dist/pjaxify.min.js",
   "dependencies": {
-    "jquery-pjax": ">=1.8.1"
+    "jquery-pjax": "1.9.6"
   },
   "ignore": [
     "test/"
