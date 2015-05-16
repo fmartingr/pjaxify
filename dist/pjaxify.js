@@ -42,7 +42,7 @@
 
   $(function() {
     if ($.support.pjax) {
-      return window._pjax_navigation = new PJAX();
+      return window.pjaxify = new PJAX();
     }
   });
 
