@@ -9,11 +9,6 @@ module.exports = (grunt) ->
         js_dest: 'static_components/js',
         css_dest: 'static_components/css'
 
-    coffee:
-      development:
-        files:
-          'dist/pjaxify.js': 'src/pjaxify.coffee'
-
     uglify:
       dist:
         files:
@@ -23,8 +18,7 @@ module.exports = (grunt) ->
       options:
         livereload: true
       coffee:
-        files: ['src/*.coffee']
-        tasks: ['coffee',]
+        files: ['dist/pjaxify.js']
 
     connect:
       server:
